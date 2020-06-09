@@ -1,0 +1,157 @@
+(function ($) {
+
+	var pull 		= $('.pull-slider');
+		menu 		= $('.tally-block .tally-block__board');
+		menuHeight	= menu.height();
+
+	// Create the dropdown base
+	$("<select data-role=responsive-select />").appendTo(".sort-column-block");
+
+	// Create default option "Go to..."
+	$("<option />", {
+		"value"   : "",
+		"text"    : "Filter By"
+	}).appendTo(".sort-column-block select");
+
+	// Populate dropdown with menu items
+	$(".sort-column-block > .sort-column__item > ul > li").each(function() {
+		var el = $(this);
+
+		var hasChildren = el.find("ul"),
+	    	children    = el.find("li");
+
+	    if (hasChildren.length) {
+	    	$("<optgroup />", {
+	    	  "label": el.find("> a").text()
+	    	}).appendTo(".sort-column-block select");
+
+	    	children.each(function() {
+	          			
+		    	$("<option />", {
+		    		"text": $(this).text()
+		    	}).appendTo("optgroup:last");
+	    
+	    	});
+	    } else {
+    			$("<option />", {
+    		      "value"   : el.attr("href"),
+    		      "text"    : el.text()
+	    	    }).appendTo(".sort-column-block select");
+	    }
+
+	    console.log(el.html());
+	});
+
+	$('[data-role="responsive-select"]').each(function(){
+		var $select = $(this);
+		$select.wrap('<div data-role="responsive-select-wrapper" class="sort-column__item-select" />')
+			.parent()
+			.prepend('<span class="select-value icon" data-icon="&#x25bc;">' + $(this).find('option:selected').text() + '</span>');
+	});
+
+	$('body').on('change', '.sort-column__item-select select', function () {
+		$(this).parent().find('.select-value').text($(this).find('option:selected').text());
+	})
+
+	// To make dropdown actually work
+	$("sort-column-block select").change(function() {
+		window.location = $(this).find("option:selected").val();
+	});
+
+	// To pull up the fixed score board
+	$(pull).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+
+
+	// Trigger to open left side menu
+	$('.show-left').click(function () {
+		var $nav_menu = $('body, .group__block--responsive'),
+
+		val = $nav_menu.css('left') === '250px' ? '0px' : '250px';
+
+		$('.tally-block').toggle();
+		
+		$nav_menu.animate({
+			left: val
+		}, 300)
+	});
+
+	// Remove link to main link of main menu
+	//$('.tier__level-sub > a:first-child').removeAttr("href").css("cursor","pointer");
+
+
+
+	$('.tier__level-sub').prepend();
+
+	var clonedNav = $('.group__block--responsive').clone();
+	console.log(clonedNav.html());
+	$('.group__block--responsive').hide();
+	$('.wrapper').append(clonedNav);
+
+
+	/************************/ 
+	$(window).resize(function(){
+		// if ($(window).width() <= 479) {
+			
+			// Clone the children of more sports list
+			var newSportsList = $('#more-sports > ul.tier__first').children().clone();
+			
+			// Remove their class and change it to tier__level tier__level-sub
+			newSportsList.removeClass('tier__first-level').addClass('tier__level tier__level-sub');
+
+			// Insert the new list from more sports menu after the menu list more sports
+			newSportsList.insertAfter($('#more-sports'));
+
+			// Remove or hide the existing more sports container
+			$('#more-sports').hide();
+
+			// Clone the main menu link and place it as its first child
+			$('.tier__level-sub > a').each(function(){
+				var $this = $(this);
+
+				$newLIFirst = $('<li class="tier__first-level" />').prepend($this.clone());
+				$newLISec = $('<li class="tier__second-level" />').prepend($this.clone());
+				
+				$newLIFirst.insertBefore($this.next('.tier__first').find(':eq(0)'));
+				$newLISec.insertBefore($this.next('.tier__second').find(':eq(0)'));
+
+				$(this).first().removeAttr("href").css("cursor","pointer");
+
+			});
+
+			// Add text for additional link
+			$('.tier__first > li:first-child, .tier__second > li:first-child').find('a').prepend('ALL ').css('text');
+
+			var childPanel = $('.tier__level-sub > .tier__first, .tier__level-sub > .tier__second').hide();
+			
+			$('.tier__level-sub > a').click(function(){
+				childPanel.slideUp();
+				$(this).next().stop().slideDown('fast');
+				return false;
+			});
+		// }
+	});
+
+
+	
+}(jQuery));
+
+
+	var $this = $(this);
+	
+// 	// 
+// 	// console.log($this);
+
+// 	// $newLI = $('<li class="tier__first-level" />').prepend($this.clone());
+
+// 	// $newLI.insertBefore($this.next('.tier__first').find(':eq(0)'));
+
+// 	// $(this).first().removeAttr("href").css("cursor","pointer");
+
+// 	// if($newLI.next().hasClass('cloned')) {
+// 	// 	$('.tier__first > li:eq(0)').remove();
+// 	// } else {
+// 	// 	$('.tier__first').prepend($newLI);
+// 	// }

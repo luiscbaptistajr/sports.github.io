@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* ===============
+   GLOBALS
+   =============== */
+html, body {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+   background: #FFF;
+}
+
+/* ===============
+   BASIC LAYOUT
+   =============== */
+/* Header */
+.sg-logo {
+	border: 0;
+	color: #FFF;
+}
+/* Left Sidebar */
+/* Right Sidebar */
+/* Footer */
+
+/* ===============
+   NAVIGATION
+   =============== */
+/* Primary */
+/* Secondary */
+/* Breadcrumbs */
+/* Footer */
+
+/* ===============
+   CONTENT
+   =============== */
+/* Colors */
+.sg-color--a .sg-color-swatch { background: #000; }
+.sg-color--b .sg-color-swatch { background: #111; }
+.sg-color--c .sg-color-swatch { background: #252525; }
+.sg-color--d .sg-color-swatch { background: #333; }
+.sg-color--e .sg-color-swatch { background: #464646; }
+.sg-color--f .sg-color-swatch { background: #D0D0D0; }
+.sg-color--g .sg-color-swatch { background: #EBEBEB; }
+.sg-color--h .sg-color-swatch { background: #FFF; }
+.sg-color--i .sg-color-swatch { background: #FFCC00; }
+.sg-color--j .sg-color-swatch { background: #9E0B0F; }
+.sg-color--k .sg-color-swatch { background: #0054A6; }
+
+
+/* Primary font */
+.sg-font-primary {
+	font-family: "open-sans", sans-serif;
+}
+
+/* Secondary font */
+.sg-font-secondary {
+   font-family: "chaparral-pro", sans-serif;
+}

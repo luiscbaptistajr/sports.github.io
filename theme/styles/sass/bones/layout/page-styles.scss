@@ -1,0 +1,111 @@
+/*
+* Page specific styles
+*/
+
+@import "theme.scss";
+
+// SPORTS - INDEX PAGE
+.sports-home--page {
+
+	// THEME INDEX WITH KITKAT
+	// @include theme($kitkat-red, $kitkat-dred);
+
+}
+
+// SPORTS - PLAYERS INDEX PAGE
+.sports-players-home--page {
+
+	.main-media--hero {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.inner-wrapper {
+		&.bg--gray {
+			&.padded-top {
+				.group__block--full { margin-bottom: 0; }
+			}
+		}
+	}
+
+}
+
+// SPORTS - PLAYERS INDIVIDUAL PAGE
+.sports-players-individual--page {
+
+	#main__content {
+		.inner-wrapper { overflow: hidden; }
+	}
+
+	.main-media--hero {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.groups {
+		&.group__block--400,
+		&.group__block--820,
+		&.group__block--full {
+			margin-bottom: 0;
+		}
+	}
+
+	.share-block {
+		position: relative;
+		left: fluidity(-20px, 1240px);
+		width: fluidity(1280px, 1240px);
+		border-top: 1px solid $border-line;
+		border-bottom: 1px solid $border-line;
+		margin: 0;
+
+		.social-media-block {
+			margin-left: fluidity(20px, 1240px);	
+		}
+
+		.buttons-block {
+			margin-right: fluidity(20px, 1240px);
+
+			.button--green {
+				position: relative;
+				left: fluidity(-100px, 1240px);
+			}
+		}
+
+	}
+
+}
+
+// SPORTS - PLAYERS INDIVIDUAL PAGE
+.sports-players-schedule--page {}
+
+// SPORTS - PHOTOS/VIDEOS INNER PAGE & LIVESTREAM
+.sports-photos-inner--page,
+.sports-videos-inner--page {
+	
+	#main__content {
+		.inner-wrapper { overflow: hidden; }
+	}
+
+	.grid-block {
+		&.grid-block--400x300 { margin-bottom: 40px; }
+	}
+}
+
+// SPORTS - LIVESTREAM PAGE
+.sports-livestream--page {
+
+	#main__content {
+		margin-bottom: 20px;
+
+		.inner-wrapper { overflow: hidden; }
+	}
+	.bg--dark {
+		.groups {
+			&.group__block--full { margin-bottom: 0; }
+		}
+	}
+	.hero-media-block__livestream { margin-bottom: 0; }
+}
+

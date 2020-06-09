@@ -1,0 +1,27 @@
+@import "_config.scss";
+
+@mixin theme($color:$red, $alt-color:$dred) {
+	
+	.listing-block--articles,
+	.misc-block__connect-block {
+
+		.block-titles { background: $color !important; }	
+
+	}
+	
+	.buttons {
+		&.button--more {
+			background: $color !important;
+			
+			.button--icon { background-color: $alt-color !important; }
+
+			&:hover {
+				background: $alt-color !important;
+				
+				.button--label { color: $fair !important; }
+				.button--icon { background-color: $color !important; }
+			}
+		}
+	}
+
+}

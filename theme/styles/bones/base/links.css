@@ -1,0 +1,14 @@
+a, a:visited {
+  font-family: "open-sans", sans-serif;
+  color: #333;
+  text-decoration: underline;
+  outline: 0;
+}
+
+a:hover, a:focus {
+  color: #000;
+}
+
+p a, p a:visited {
+  line-height: inherit;
+}

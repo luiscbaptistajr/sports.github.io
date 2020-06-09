@@ -1,0 +1,17 @@
+/* Tablet landscape size to standard 1200 (devices and browsers) */
+@import "media-min-960-max-1024.scss";
+
+/* Smaller than standard 960 (devices and browsers) */
+@import "media-max-959.scss";
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@import "media-min-768-max-959.scss";
+
+/* All Mobile Sizes (devices and browser) */
+@import "media-max-767.scss";
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@import "media-min-480-max-767.scss";
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@import "media-max-479.scss";

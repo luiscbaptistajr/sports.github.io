@@ -1,0 +1,25 @@
+/*@mixin background-gradient($start-color: red, $end-color: blue, $fallback-color: black){
+	background-color: $fallback-color;
+	filter:           progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start-color}', endColorstr='#{$end-color}');
+	background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, $start-color), color-stop(100%, $end-color));
+	background-image: -webkit-linear-gradient(top, $start-color, $end-color);
+	background-image:    -moz-linear-gradient(top, $start-color, $end-color);
+	background-image:     -ms-linear-gradient(top, $start-color, $end-color);
+	background-image:      -o-linear-gradient(top, $start-color, $end-color);
+	background-image:         linear-gradient(top, $start-color, $end-color);
+}*/
+
+@mixin background-gradient($color) {
+	/*background-color: $from;
+	background-image: -moz-linear-gradient($from 0%, $to 100%);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+	background-image: -webkit-linear-gradient($from 0%, $to 100%);
+	background-image: -o-linear-gradient($from 0%, $to 100%);*/
+	background: -moz-linear-gradient(top,  rgba($color, 0.65) 0%, rgba($color,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($color,0.65)), color-stop(100%,rgba($color,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba($color, 0.65) 0%,rgba($color, 0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba($color, 0.65) 0%,rgba($color, 0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba($color, 0.65) 0%,rgba($color, 0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba($color, 0.65) 0%,rgba($color, 0) 100%); /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}

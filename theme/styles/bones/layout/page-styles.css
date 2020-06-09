@@ -1,0 +1,63 @@
+/*
+* Page specific styles
+*/
+.sports-players-home--page .main-media--hero {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.sports-players-home--page .inner-wrapper.bg--gray.padded-top .group__block--full {
+  margin-bottom: 0;
+}
+
+.sports-players-individual--page #main__content .inner-wrapper {
+  overflow: hidden;
+}
+.sports-players-individual--page .main-media--hero {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.sports-players-individual--page .groups.group__block--400, .sports-players-individual--page .groups.group__block--820, .sports-players-individual--page .groups.group__block--full {
+  margin-bottom: 0;
+}
+.sports-players-individual--page .share-block {
+  position: relative;
+  left: -1.6129%;
+  width: 103.22581%;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  margin: 0;
+}
+.sports-players-individual--page .share-block .social-media-block {
+  margin-left: 1.6129%;
+}
+.sports-players-individual--page .share-block .buttons-block {
+  margin-right: 1.6129%;
+}
+.sports-players-individual--page .share-block .buttons-block .button--green {
+  position: relative;
+  left: -8.06452%;
+}
+
+.sports-photos-inner--page #main__content .inner-wrapper,
+.sports-videos-inner--page #main__content .inner-wrapper {
+  overflow: hidden;
+}
+.sports-photos-inner--page .grid-block.grid-block--400x300,
+.sports-videos-inner--page .grid-block.grid-block--400x300 {
+  margin-bottom: 40px;
+}
+
+.sports-livestream--page #main__content {
+  margin-bottom: 20px;
+}
+.sports-livestream--page #main__content .inner-wrapper {
+  overflow: hidden;
+}
+.sports-livestream--page .bg--dark .groups.group__block--full {
+  margin-bottom: 0;
+}
+.sports-livestream--page .hero-media-block__livestream {
+  margin-bottom: 0;
+}

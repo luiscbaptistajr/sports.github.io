@@ -1,0 +1,20 @@
+@media only screen and (min-width: 960px) and (max-width: 1024px) and (orientation: landscape) {
+  header.header__main .group__block--responsive.inner-wrapper .main-menu-block .tier #more-sports .cloned {
+    display: none;
+  }
+  header.header__main--fixed .group__block--responsive.inner-wrapper .main-menu-block .tier #tier_hide-first {
+    display: none;
+  }
+  header.header__main--fixed .group__block--responsive.inner-wrapper .main-menu-block .tier #more-sports .tier__insert-sports .clone_first {
+    display: block;
+  }
+  header.header__main--fixed .group__block--responsive.inner-wrapper .main-menu-block .tier #more-sports .tier__insert-sports .clone_mid {
+    display: block;
+  }
+  header .responsive-menu-group {
+    display: none;
+  }
+  header .show-left {
+    display: none;
+  }
+}

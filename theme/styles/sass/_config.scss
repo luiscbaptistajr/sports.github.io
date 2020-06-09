@@ -1,0 +1,44 @@
+@import "../lib/functions.scss";
+@import "../lib/mixins.scss";
+
+// FONT FAMILIES
+$open-sans: "open-sans", sans-serif;
+$chaparral-pro: "chaparral-pro", sans-serif;
+
+// COLORS (DISTINCTION)
+
+$fair: #FFF;
+$dark: #000;
+$red: #9E0B0F;
+$yellow: #FFCC00;
+$dark-yellow: #CAA200;
+$blue: #0054A6;
+$light-blue: #00AEEF;
+$dark-blue: #003471;
+$green: #00A651;
+$light-green: #39B54A;
+$dark-green: #007236;
+$grey: #333333;
+$light-grey: #D0D0D0;
+$orange: #F7941D;
+
+$menu-item-bg: #111;
+$menu-item-sub-bg: #464646;
+$menu-text-color: #252525;
+$article-title: #333;
+$article-title-hover: #D0D0D0;
+$share-bg: #EBEBEB;
+$border-line: #D6D6D6;
+
+$sports-blue: #1352AA;
+$sports-nav-blue: #0F3E81;
+$sub-item-blue: #1352AA; 
+$sports-fixed-bg: #1452A9;
+
+// SPRITE DETAIL
+$sprite_width: 1282px;
+$sprite_height: 57px;
+
+// THEME COLORS
+$kitkat-red: #EC2227;
+$kitkat-dred: #C20024;

@@ -1,0 +1,107 @@
+@media only screen and (max-width: 959px) {
+	//Channels
+	.channels-block {display: none;}
+
+	//Groups
+	.groups {
+	    float: left;
+	    // height: 460px; /* TEST */
+	    @include clearfix();
+
+    	&.group__block--full {
+    		.group__block--responsive {
+                .search-menu {display: block;}
+            }
+    	}
+
+	    &.group__block--960 {
+	        width: fluidity(959px, 959px);
+	        height: auto;
+	    }
+
+	}
+
+	//Pager
+	.pager-block {
+		li {
+			padding: 0 fluidity(25px, 820px);
+		}
+	}
+
+	//Main Menu
+	.main-menu-block {
+
+		.tier {
+
+			#more-sports {
+				display: none;
+			}
+		}
+	}
+
+	//Inner Wrapper
+	/*.inner-wrapper {
+	    float: left;
+	    padding: 0 fluidity(10px, 959px);
+	    width: fluidity(939px, 959px);
+	}*/
+
+	//Featured
+	.featured-block {
+		.featured-block__item {
+			
+			.item__media {
+	            width: 100%;
+	            position: static;
+	        }
+			
+			&.featured-block__item--whole, &.featured-block__item--half, &.featured-block__item--one-fourth {
+			    height: auto;
+			}
+			
+		}
+		
+		&.featured-block--media {
+			.featured-block__item {
+				.item__media {
+		            width: 100%;
+		            position: static;
+		        }
+				&.featured-block__item--whole, &.featured-block__item--half, &.featured-block__item--one-fourth {
+					height: auto;
+				}
+			}
+		}
+	}
+
+    //Footer Channels
+	.footer-block {
+		display: block;
+
+		&.channels-block {
+			width: 100%;
+
+			@include clearfix();
+			
+			a {
+			    float: left;
+			    display: inline-block;
+			    width: 50%;
+
+			    img {
+			        display: block;
+			        max-width: 100%;
+			        height: auto;
+			        margin: 10px auto;
+			    }
+			}
+		}
+
+		&.misc-block__connect-block {
+			display: none;
+		}
+
+	}
+
+	
+}
