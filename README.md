@@ -11,8 +11,6 @@ In the service of the Filipino sports fan, worldwide.
   * **Backend Developer:** 
   * **Project Manager:** 
 
-###Staging URL
-[http://10.0.7.165/sports2014/](http://10.0.7.165/sports2014/)
 
 #ANNOTATION / GUIDE
 ---------------------
